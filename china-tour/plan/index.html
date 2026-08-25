@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<meta content="แผนทริปเซินเจิ้นตามพื้นที่ จาก 5 คลิปและแผนที่เดิม 39 จุด" name="description">
+<meta content="noindex, nofollow" name="robots">
+<meta content="#7f1218" name="theme-color">
+<title>แผนทริปเซินเจิ้น — ดูตามพื้นที่ · ลุงอ้วนตะลุยจีน</title>
+<link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@500;600;700&family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+    /* Google Fonts for this standalone preview only */
+    :root{
+      --wine:#7f1218;--navy:#001d55;--cream:#f6f0e4;--paper:#fffdf8;
+      --ink:#171717;--muted:#655f57;--line:#d9cdbc;--gold:#c98630;--blue-pale:#e9f0f7;
+      --max:760px;--display:'Bai Jamjuree','Noto Sans Thai',sans-serif;--body:'IBM Plex Sans Thai','Noto Sans Thai',sans-serif
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--body);line-height:1.6;text-rendering:optimizeLegibility}
+    h1,h2,h3,p,ul{margin:0}
+    h1,h2,h3{font-family:var(--display);line-height:1.2;text-wrap:balance}
+    p{text-wrap:pretty}
+    a{color:inherit}
+    :focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+    .skip{position:fixed;z-index:100;top:.75rem;left:.75rem;transform:translateY(-180%);background:white;padding:.65rem 1rem;border-radius:.4rem;color:var(--navy);font-weight:700}
+    .skip:focus{transform:none}
+    .shell{width:min(var(--max),calc(100% - 1.4rem));margin-inline:auto}
+
+    .header{position:sticky;top:0;z-index:30;background:rgb(246 240 228/.96);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+    .nav{min-height:3.6rem;display:flex;align-items:center;justify-content:space-between;gap:.7rem}
+    .brand{display:flex;align-items:center;gap:.6rem;text-decoration:none}
+    .brand-mark{width:2.2rem;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;background:var(--wine);color:white;border:2px solid var(--gold);font:700 .72rem var(--display)}
+    .brand strong{display:block;color:var(--wine);font:700 .9rem var(--display)}
+    .brand small{display:block;color:var(--navy);font-size:.75rem}
+    .back{display:inline-flex;align-items:center;min-height:2.4rem;padding:.4rem .7rem;border:1px solid var(--line);border-radius:.4rem;background:var(--paper);color:var(--navy);font-weight:700;font-size:.8rem;text-decoration:none}
+    .back:hover{background:var(--wine);border-color:var(--wine);color:white}
+
+    .intro{padding:1.15rem 0 1rem}
+    .kicker{color:var(--wine);font-weight:700;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase}
+    .intro h1{color:var(--navy);font-size:clamp(1.7rem,7vw,2.4rem);letter-spacing:-.03em;margin:.25rem 0 .4rem}
+    .intro p{color:var(--muted);font-size:.92rem}
+
+    .chip-bar{position:sticky;top:3.6rem;z-index:24;background:rgb(255 253 248/.97);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+    .chips{display:flex;gap:.4rem;padding:.55rem 0;overflow:auto;scrollbar-width:thin}
+    .chips button{flex:0 0 auto;border:1px solid var(--line);background:transparent;color:var(--navy);font:700 .82rem var(--display);padding:.55rem .8rem;border-radius:999px;white-space:nowrap;cursor:pointer}
+    .chips button[aria-pressed="true"]{background:var(--wine);border-color:var(--wine);color:white}
+
+    .map-block{padding:1rem 0 0;scroll-margin-top:8rem}
+    .map-frame{width:100%;height:14.5rem;border:1px solid var(--line);background:var(--paper)}
+    .map-note{margin-top:.45rem;color:var(--muted);font-size:.78rem}
+
+    .area{padding:1.6rem 0 0;scroll-margin-top:8rem}
+    .area h2{color:var(--navy);font-size:1.45rem;margin:.2rem 0 .35rem}
+    .why{color:var(--muted);font-size:.9rem;margin-bottom:.85rem}
+    .cards{display:grid;gap:.7rem;padding-bottom:.2rem}
+    .card{background:var(--paper);border:1px solid var(--line);padding:1.05rem 1.1rem}
+    .card-top{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem .55rem;margin-bottom:.35rem}
+    .area-tag{display:inline-block;padding:.18rem .5rem;border-radius:999px;background:var(--blue-pale);color:var(--navy);font:700 .7rem var(--display);letter-spacing:.03em}
+    .card h3{color:var(--navy);font-size:1.12rem}
+    .card .also{display:block;color:var(--muted);font-size:.82rem;font-weight:500;margin-top:.15rem}
+    .card .do{color:var(--muted);font-size:.88rem;margin:.45rem 0 .75rem}
+    .actions{display:flex;flex-wrap:wrap;gap:.45rem}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:2.45rem;padding:.5rem .75rem;border-radius:.4rem;text-decoration:none;font-weight:700;font-size:.8rem}
+    .btn-maps{background:var(--navy);color:white}
+    .btn-yt{background:transparent;color:var(--navy);border:1px solid var(--navy)}
+    .btn-yt.is-open{border-style:dashed;color:var(--muted)}
+    .btn:hover{background:var(--wine);color:white;border-color:var(--wine)}
+    .clips{margin-top:.75rem;display:flex;flex-wrap:wrap;gap:.4rem}
+    .clips a{display:inline-flex;align-items:center;min-height:2.1rem;padding:.3rem .65rem;border:1px solid var(--line);border-radius:999px;background:var(--paper);color:var(--navy);font-weight:700;font-size:.78rem;text-decoration:none}
+    .clips a:hover{background:var(--wine);border-color:var(--wine);color:white}
+
+    .footer{background:var(--navy);color:white;margin-top:2.4rem;padding:1.6rem 0}
+    .footer p{color:rgb(255 255 255/.7);font-size:.8rem}
+    .footer strong{display:block;color:white;font-family:var(--display);margin-bottom:.2rem}
+    .footer a{color:#ffd9aa}
+
+    @media(min-width:700px){.map-frame{height:22rem}}
+    @media(max-width:560px){.brand small{display:none}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">ข้ามไปเนื้อหาหลัก</a>
+<header class="header">
+<nav aria-label="เมนูหลัก" class="nav shell">
+<a aria-label="กลับไปแผนเดินทางลุงอ้วนตะลุยจีน" class="brand" href="./">
+<span aria-hidden="true" class="brand-mark">FU</span>
+<span><strong>Fatty Uncle</strong><small>แผนทริปเซินเจิ้น</small></span>
+</a>
+<a class="back" href="./">โปรแกรมเดินทาง</a>
+</nav>
+</header>
+
+<div class="chip-bar">
+<div aria-label="เลือกย่าน" class="chips shell" role="toolbar">
+<button aria-pressed="true" data-area="all" type="button">ทั้งหมด</button><button aria-pressed="false" data-area="nanshan" type="button">หนานซาน</button><button aria-pressed="false" data-area="futian" type="button">ฝูเถียน</button><button aria-pressed="false" data-area="hqb" type="button">หัวเฉียงเป่ย</button><button aria-pressed="false" data-area="longgang" type="button">หลงกัง</button><button aria-pressed="false" data-area="baoan" type="button">เป่าอัน</button><button aria-pressed="false" data-area="qianhai" type="button">เฉียนไห่</button><button aria-pressed="false" data-area="luohu" type="button">หลัวหู</button>
+</div>
+</div>
+
+<main id="main">
+<section class="intro shell">
+<p class="kicker">Preview · Shenzhen · 5 clips</p>
+<h1>ดูตามพื้นที่ · 39 จุดจากคลิป</h1>
+<p>จัดตามย่านจากเอกสารและแผนที่เดิมเท่านั้น ใช้ได้แค่ห้าคลิปด้านล่าง เซี่ยงไฮ้ ปักกิ่ง เฉาหนาน และซัวเถาไม่อยู่ในหน้านี้ นาทีมาจากบทในคลิปเท่านั้น ถ้าไม่มีบทจะไม่เดาเวลา</p>
+<div class="clips">
+<a href="https://www.youtube.com/watch?v=k-NNaDPdj40" rel="noopener noreferrer" target="_blank">Homeless Pelican</a>
+<a href="https://www.youtube.com/watch?v=Vygruw9XqP8" rel="noopener noreferrer" target="_blank">Go Went Go</a>
+<a href="https://www.youtube.com/watch?v=V52rtjqYnTQ" rel="noopener noreferrer" target="_blank">Fit and Travel</a>
+<a href="https://www.youtube.com/watch?v=aPyza4Y_agk" rel="noopener noreferrer" target="_blank">Dave Mani</a>
+<a href="https://www.youtube.com/watch?v=EsRS2msqiKQ" rel="noopener noreferrer" target="_blank">Paul Lee</a>
+</div>
+</section>
+
+<section class="map-block shell" id="map">
+<iframe allowfullscreen class="map-frame" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/d/embed?mid=1N0BsRIry66y1mco8EMeAh6BZdxtzG4w" title="แผนที่ลุงอ้วนจีน จาก 5 คลิป"></iframe>
+<p class="map-note">แผนที่เดิม mid=1N0BsRIry66y1mco8EMeAh6BZdxtzG4w · การ์ดด้านล่างเป็นหมุดเซินเจิ้น 39 จุดเท่านั้น ชั้นซัวเถาในแผนที่นี้ไม่ได้ใส่เป็นการ์ด · <a href="https://www.google.com/maps/d/viewer?mid=1N0BsRIry66y1mco8EMeAh6BZdxtzG4w" rel="noopener noreferrer" target="_blank">เปิดแผนที่เต็ม</a></p>
+</section>
+
+<section class="area shell" id="nanshan">
+<p class="kicker">Nanshan / Houhai</p>
+<h2>หนานซาน</h2>
+<p class="why">คลัสเตอร์อ่าว: โอซีที ดีเจไอ สวนคนเก่ง อินโน 100 และมิกซ์ซีสองแห่งคนละที่</p>
+<div class="cards">
+<article class="card">
+<div class="card-top"><span class="area-tag">หนานซาน</span></div>
+<h3>อ่าวโอซีที / หาบปี้โคสต์<span class="also">欢乐海岸 · OCT Harbour</span></h3>
+<p class="do">คอมเพล็กซ์ริมอ่าวเซินเจิ้น มีคลอง ร้านอาหาร และแฟลกชิปดีเจไอ คนละที่กับ欢乐港湾 เป่าอัน</p>
+<div class="actions">
+<a class="btn btn-maps" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%AC%A2%E4%B9%90%E6%B5%B7%E5%B2%B8+%E5%8D%97%E5%B1%B1%E5%8C%BA+%E7%99%BD%E7%9F%B3%E8%B7%AF" rel="noopener noreferrer" target="_blank">Maps</a> <a class="btn btn-yt" href="https://www.youtube.com/watch?v=Vygruw9XqP8&amp;t=1457s" rel="noopener noreferrer" target="_blank">YouTube · 24:17</a>
+</div>
+</article>
+<article class="card">
+<div class="card-top"><span class="area-tag">หนานซาน</span></div>
+<h3>ดีเจไอแฟลกชิป 欢乐海岸<span class="also">DJI大疆旗舰店（深圳欢乐海岸）</span></h3>
+<p class="do">แฟลกชิปใหญ่ อาคารปิรามิดไม่สม่ำเสมอ มีสวนทดสอบโดรน DJI Oasis ไม่ใช่ Sky City และไม่ใช่ร้านหัวเฉียงเป่ย</p>
+<div class="actions">
+<a class="btn btn-maps" href="https://www.google.com/maps/search/?api=1&amp;query=DJI%E5%A4%A7%E7%96%86%E6%97%97%E8%88%B0%E5%BA%97+%E6%AC%A2%E4%B9%90%E6%B5%B7%E5%B2%B8+%E7%99%BD%E7%9F%B3%E8%B7%AF%E4%B8%9C8%E5%8F%B7" rel="noopener noreferrer" target="_blank">Maps</a> <a class="btn btn-yt" href="https://www.youtube.com/watch?v=EsRS2msqiKQ&amp;t=409s" rel="noopener noreferrer" target="_blank">YouTube · Paul Lee 6:49</a> <a class="btn btn-yt" href="https://www.youtube.com/watch?v=Vygruw9XqP8&amp;t=1457s" rel="noopener noreferrer" target="_blank">YouTube · Go Went Go 24:17</a>
+</div>
+</article>
+<article class="card">
+<div class="card-top"><span class="area-tag">หนานซาน</span></div>
+<h3>สวนครีเอทีฟ โอซีที ลอฟต์<span class="also">华侨城创意文化园 OCT-LOFT</span></h3>
+<p class="do">โรงงานเก่าที่แปลงเป็นสวนศิลปะ คาเฟ่ และสตูดิโอ คลิปไทยเดินบรรยากาศครีเอทีฟ</p>
+<div class="actions">
+<a class="btn btn-maps" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%8D%8E%E4%BE%A8%E5%9F%8E%E5%88%9B%E6%84%8F%E6%96%87%E5%8C%96%E5%9B%AD+%E9%94%A6%E7%BB%A3%E5%8C%97%E8%A1%972%E5%8F%B7" rel="noopener noreferrer" target="_blank">Maps</a> <a class="btn btn-yt" href="https://www.youtube.com/watch?v=Vygruw9XqP8&amp;t=1133s" rel="noopener noreferrer" target="_blank">YouTube · 18:53</a>
+</div>
+</article>
+<article class="card">
+<div class="card-top"><span class="area-tag">หนานซาน</span></div>
+<h3>วินโดว์ออฟเดอะเวิลด์<span class="also">世界之窗</span></h3>
+<p class="do">สวนจำลองแลนด์มาร์กโลก มีหอไอเฟลจำลอง คลิปไทยทริปเดี่ยวแวะถ่ายรูป</p>
+<div class="actions">
+<a class="btn btn-maps" href="https://www.google.com/maps/place/%E4%B8%96%E7%95%8C%E4%B9%8B%E7%AA%97/@22.5375139,113.9697556,17z" rel="noopener noreferrer" target="_blank">Maps</a> <a class="btn btn-yt is-open" href="https://www.youtube.com/watch?v=V52rtjqYnTQ" rel="noopener noreferrer" target="_blank">YouTube · ยังไม่มีนาที</a>
+</div>
+</article>
+<article class="card">
+<div class="card-top"><span class="area-tag">หนานซาน</span></div>
+<h3>สวนคนเก่ง / ทัลเลนต์พาร์ค<span class="also">深圳人才公园</span></h3>
+<p class="do">สวนริมอ่าวหลังมิกซ์ซีเบย์ มีล็อกเกอร์โดรนเมี่ยถวน คลิป Dave และ Paul สั่งอาหารโดรน จุดล็อกเกอร์ไม่มีหมุดแยก</p>
+<div class="actions">
+<a class="btn btn-maps" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%B7%B1%E5%9C%B3%E4%BA%BA%E6%89%8D%E5%85%AC%E5%9B%AD+%E7%A7%91%E8%8B%91%E5%8D%97%E8%B7%AF3329%E5%8F%B7" rel="noopener noreferrer" target="_blank">Maps</a> <a class="btn btn-yt" href="https://www.youtube.com/watch?v=aPyza4Y_agk&amp;t=34s" rel="noopener noreferrer" target="_blank">YouTube · Dave Mani 0:34</a> <a class="btn btn-yt" href="https://www.youtube.com/watch?v=EsRS2msqiKQ&amp;t=340s" rel="noopener noreferrer" target="_blank">YouTube · Paul Lee 5:40</a>
+</div>
+</article>
+<article class="card">
+<div class="card-top"><span class="area-tag">หนานซาน</span></div>
+<h3>ลานวัฒนธรรมอ่าวเซินเจิ้น<span class="also">深圳湾文化广场</span></h3>
+<p class="do">อาคารรูปก้อนหินของ MAD Architects ติดสวนคนเก่ง ในนี้มีร้าน INNO100</p>
+<div class="actions">
+<a class="btn btn-maps" href="https://www.google.com/maps/place/%E6%B7%B1%E5%9C%B3%E6%B9%BE%E6%96%87%E5%8C%96%E5%B9%BF%E5%9C%BA/@22.515,113.94,17z" rel="noopener noreferrer" target="_blank">Maps</a> <a class="btn btn-yt" href="https://www.youtube.com/watch?v=Vygruw9XqP8&amp;t=1780s" rel="noopener noreferrer" target="_blank">YouTube · 29:40</a>
+</div>
+</article>
+<article class="card">
+<div class="card-top"><span class="area-tag">หนานซาน</span></div>
+<h3>อินโน 100<span class="also">INNO100全球创新旗舰店</span></h3>
+<p class="do">ร้านนวัตกรรมในอาคารเหนือของ深圳湾文化广场 คลิป Paul เปิดทัวร์ที่นี่ ลองหุ่นยนต์และแว่นอัจฉริยะ</p>
+<div class="actions">
+<a class="btn btn-maps" href="https://www.google.com/maps/search/?api=1&amp;query=INNO100+%E6%B7%B1%E5%9C%B3%E6%B9%BE%E6%96%87%E5%8C%96%E5%B9%BF%E5%9C%BA+%E5%8C%97%E9%A6%86" rel="noopener noreferrer" target="_blank">Maps</a> <a class="btn btn-yt" href="https://www.youtube.com/watch?v=EsRS2msqiKQ&amp;t=61s" rel="noopener noreferrer" target="_blank">YouTube · 1:01</a>
+</div>
+</article>
+<article class="card">
+<div class="card-top"><span class="area-tag">หนานซาน</span></div>
+<h3>มิกซ์ซี อ่าวเซินเจิ้น<span class="also">深圳湾万象城</span></h3>
+<p class="do">ห้างหรูเชิงตึกหน่อไม้ไผ่ คลิป Paul เรียก MixC Bay คนละแห่งกับ万象天地 และ万象前海</p>
+<div class="actions">
+<a class="btn btn-maps" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%B7%B1%E5%9C%B3%E6%B9%BE%E4%B8%87%E8%B1%A1%E5%9F%8E+%E7%A7%91%E8%8B%91%E5%8D%97%E8%B7%AF2888%E5%8F%B7" rel="noopener noreferrer" target="_blank">Maps</a> <a class="btn btn-yt" href="https://www.youtube.com/watch?v=EsRS2msqiKQ&amp;t=0s" rel="noopener noreferrer" target="_blank">YouTube · 0:00</a>
+</div>
+</article>
+<article class="card">
+<div class="card-top"><span class="area-tag">หนานซาน</span></div>
+<h3>ตึกหน่อไม้ไผ่ / หัวเหริน<span class="also">华润大厦（春笋）</span></h3>
+<p class="do">ตึกสำนักงานรูปหน่อไม้ไผ่ เชิงตึกคือ深圳湾万象城 คลิป Paul ถ่ายสกายไลน์ตอนเปิดทัวร์</p>
+<div class="actions">
+<a class="btn btn-maps" href="https://www.google.com/maps/place/%E5%8D%8E%E6%B6%A6%E5%A4%A7%E5%8E%A6%20%E6%98%A5%E7%AC%8B/@22.51694,113.94167,17z" rel="noopener noreferrer" target="_blank">Maps</a> <a class="btn btn-yt" href="https://www.youtube.com/watch?v=EsRS2msqiKQ&amp;t=0s" rel="noopener noreferrer" target="_blank">YouTube · 0:00</a>
+</div>
+</article>
+<article class="card">
+<div class="card-top"><span class="area-tag">หนานซาน</span></div>
+<h3>มิกซ์ซีเวิลด์ / ว่านเซี่ยงเทียนตี้<span class="also">深圳万象天地 MixC World</span></h3>
+<p class="do">ห้างเปิดโล่งย่านสวนเทคโนโลยี ติดเมโทร高新园 มีหัวเว่ยแฟลกชิปและ HAUS NOWHERE คนละแห่งกับมิกซ์ซีเบย์</p>
+<div class="actions">
+<a class="btn btn-maps" href="https://www.google.com/maps/place/%E4%B8%87%E8%B1%A1%E5%A4%A9%E5%9C%B0/@22.54504,113.95123,17z" rel="noopener noreferrer" target="_blank">Maps</a> <a class="btn btn-yt" href="https://www.youtube.com/watch?v=EsRS2msqiKQ&amp;t=1104s" rel="noopener noreferrer" target="_blank">YouTube · 18:24</a>
+</div>
+</article>
+<article class="card">
+<div class="card-top"><span class="area-tag">หนานซาน</span></div>
+<h3>หัวเว่ยแฟลกชิป ว่านเซี่ยงเทียนตี้<span class="also">华为旗舰店·深圳万象天地</span></h3>
+<p class="do">แฟลกชิปหัวเว่ยใน万象天地 มีโซนรถให้เดินดู ตรงกับบท Huawei cars and gadgets ในคลิป Paul</p>
+<div class="actions">
+<a class="btn btn-maps" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%8D%8E%E4%B8%BA%E6%97%97%E8%88%B0%E5%BA%97+%E4%B8%87%E8%B1%A1%E5%A4%A9%E5%9C%B0+SL113+SL213+%E6%B7%B1%E5%8D%97%E5%A4%A7%E9%81%939668%E5%8F%B7" rel="noopener noreferrer" target="_blank">Maps</a> <a class="btn btn-yt" href="https://www.youtube.com/watch?v=EsRS2msqiKQ&amp;t=760s" rel="noopener noreferrer" target="_blank">YouTube · 12:40</a>
+</div>
+</article>
+<article class="card">
+<div class="card-top"><span class="area-tag">หนานซาน</span></div>
+<h3>เฮาส์ โนว์แฮร์<span class="also">HAUS NOWHERE 深圳万象天地店</span></h3>
+<p class="do">สเปซ Gentle Monster / Tamburins ในลานน้ำ万象天地 คลิป Paul เดินโซนหรู MixC World</p>
+<div class="actions">
+<a class="btn btn-maps" href="https://www.google.com/maps/search/?api=1&amp;query=HAUS+NOWHERE+%E4%B8%87%E8%B1%A1%E5%A4%A9%E5%9C%B0+%E6%B0%B4%E5%B9%BF%E5%9C%BA+NL199" rel="noopener noreferrer" target="_blank">Maps</a> <a class="btn btn-yt" href="https://www.youtube.com/watch?v=EsRS2msqiKQ&amp;t=1104s" rel="noopener noreferrer" target="_blank">YouTube · 18:24</a>
+</div>
+</article>
+<article class="card">
+<div class="card-top"><span class="area-tag">หนานซาน</span></div>
+<h3>เสียวหมี่โฮม ตึกเสียวหมี่เซินเจิ้น<span class="also">小米之家深圳大厦旗舰店</span></h3>
+<p class="do">แฟลกชิปเสียวหมี่ที่海德三道–登良路 ชั้น 2 มีโซนรถ คลิปไทยแวะดูรถและมือถือ ยังไม่มีนาทีในคลิป</p>
+<div class="actions">
+<a class="btn btn-maps" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B0%8F%E7%B1%B3%E4%B9%8B%E5%AE%B6%E6%B7%B1%E5%9C%B3%E5%A4%A7%E5%8E%A6%E6%97%97%E8%88%B0%E5%BA%97+%E6%B5%B7%E5%BE%B7%E4%B8%89%E9%81%93+%E7%99%BB%E8%89%AF%E8%B7%AF+%E5%8D%97%E5%B1%B1" rel="noopener noreferrer" target="_blank">Maps</a> <a class="btn btn-yt is-open" href="https://www.youtube.com/watch?v=V52rtjqYnTQ" rel="noopener noreferrer" target="_blank">YouTube · ยังไม่มีนาที</a>
+</div>
+</article>
+</div>
+</section><section class="area shell" id="futian">
+<p class="kicker">Futian</p>
+<h2>ฝูเถียน</h2>
+<p class="why">ศูนย์ราชการ สถานีดวงตา อัปเปอร์ฮิลส์ ออร์บิตวัน และวันอเวนิว</p>
+<div class="cards">
+<article class="card">
+<div class="card-top"><span class="area-tag">ฝูเถียน</span></div>
+<h3>พิพิธภัณฑ์ศิลปะร่วมสมัยและการวางผังเมือง<span class="also">深圳市当代艺术与城市规划馆</span></h3>
+<p class="do">พิพิธภัณฑ์ฟรีใกล้ศูนย์ราชการ มีโมเดลเมืองและโฮโลแกรม Homeless Pelican พาเดินดูการเติบโตของเมือง ปิดวันจันทร์</p>
+<div class="actions">
+<a class="btn btn-maps" href="https://www.google.com/maps/place/%E6%B7%B1%E5%9C%B3%E5%B8%82%E5%BD%93%E4%BB%A3%E8%89%BA%E6%9C%AF%E4%B8%8E%E5%9F%8E%E5%B8%82%E8%A7%84%E5%88%92%E9%A6%86/@22.54861,114.05667,17z" rel="noopener noreferrer" target="_blank">Maps</a> <a class="btn btn-yt" href="https://www.youtube.com/watch?v=k-NNaDPdj40&amp;t=736s" rel="noopener noreferrer" target="_blank">YouTube · 12:16</a>
+</div>
+</article>
+<article class="card">
+<div class="card-top"><span class="area-tag">ฝูเถียน</span></div>
+<h3>ศูนย์ราชการและลานโชว์ไฟ<span class="also">深圳市民中心 / 市民中心广场灯光秀</span></h3>
+<p class="do">อาคารรัฐบาลกลางฝูเถียน CBD โชว์ไฟศุกร์–เสาร์ Homeless Pelican และ Dave Mani ปิดที่ลานนี้</p>
+<div class="actions">
+<a class="btn btn-maps" href="https://www.google.com/maps/place/%E6%B7%B1%E5%9C%B3%E5%B8%82%E6%B0%91%E4%B8%AD%E5%BF%83/@22.54613,114.05449,17z" rel="noopener noreferrer" target="_blank">Maps</a> <a class="btn btn-yt" href="https://www.youtube.com/watch?v=k-NNaDPdj40&amp;t=2462s" rel="noopener noreferrer" target="_blank">YouTube · Homeless Pelican 41:02</a> <a class="btn btn-yt" href="https://www.youtube.com/watch?v=aPyza4Y_agk&amp;t=2151s" rel="noopener noreferrer" target="_blank">YouTube · Dave Mani 35:51</a>
+</div>
+</article>
+<article class="card">
+<div class="card-top"><span class="area-tag">ฝูเถียน</span></div>
+<h3>สถานีกั่งเสียเป่ย / ดวงตาเซินเจิ้น<span class="also">岗厦北站 / 深圳之眼</span></h3>
+<p class="do">ฮับรถไฟใต้ดิน 4 สาย โดมกระจกให้แสงธรรมชาติลงโถง คลิปไทยและ Dave แวะถ่ายสถาปัตย์</p>
+<div class="actions">
+<a class="btn btn-maps" href="https://www.google.com/maps/place/%E5%B2%97%E5%8E%A6%E5%8C%97%E7%AB%99/@22.54083,114.06889,17z" rel="noopener noreferrer" target="_blank">Maps</a> <a class="btn btn-yt" href="https://www.youtube.com/watch?v=Vygruw9XqP8&amp;t=289s" rel="noopener noreferrer" target="_blank">YouTube · Go Went Go 4:49</a> <a class="btn btn-yt" href="https://www.youtube.com/watch?v=aPyza4Y_agk&amp;t=1005s" rel="noopener noreferrer" target="_blank">YouTube · Dave Mani 16:45</a>
+</div>
+</article>
+<article class="card">
+<div class="card-top"><span class="area-tag">ฝูเถียน</span></div>
+<h3>อัปเปอร์ฮิลส์ / เชิงเย่ซ่างเฉิง<span class="also">深业上城</span></h3>
+<p class="do">คอมเพล็กซ์ช้อปปิ้ง–โรงแรม มีดาดฟ้า Loft Town โรงแรม MUJI และทางเดินเชื่อมสวน คลิปไทยเดินช้อปกินที่นี่</p>
+<div class="actions">
+<a class="btn btn-maps" href="https://www.google.com/maps/place/%E6%B7%B1%E4%B8%9A%E4%B8%8A%E5%9F%8E/@22.55958,114.06667,17z" rel="noopener noreferrer" target="_blank">Maps</a> <a class="btn btn-yt" href="https://www.youtube.com/watch?v=Vygruw9XqP8&amp;t=545s" rel="noopener noreferrer" target="_blank">YouTube · 9:05</a>
+</div>
+</article>
+<article class="card">
+<div class="card-top"><span class="area-tag">ฝูเถียน</span></div>
+<h3>โรงแรมมูจิ เซินเจิ้น<span class="also">深圳无印良品酒店</span></h3>
+<p class="do">โรงแรม MUJI แห่งแรกของโลก อยู่ใน深业上城 คลิปไทยเดินดูไลฟ์สไตล์มูจิในบท UpperHills</p>
+<div class="actions">
+<a class="btn btn-maps" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%B7%B1%E5%9C%B3%E6%97%A0%E5%8D%B0%E8%89%AF%E5%93%81%E9%85%92%E5%BA%97+%E6%B7%B1%E4%B8%9A%E4%B8%8A%E5%9F%8E+%E7%9A%87%E5%B2%97%E8%B7%AF5001%E5%8F%B7" rel="noopener noreferrer" target="_blank">Maps</a> <a class="btn btn-yt" href="https://www.youtube.com/watch?v=Vygruw9XqP8&amp;t=545s" rel="noopener noreferrer" target="_blank">YouTube · 9:05</a>
+</div>
+</article>
+<article class="card">
+<div class="card-top"><span class="area-tag">ฝูเถียน</span></div>
+<h3>ฮ่ายฉา / ชาชีส 深业上城<span class="also">喜茶（深业上城DP店）</span></h3>
+<p class="do">สาขาที่ล็อกได้: ชั้น 3 โซนใต้ 深业上城 ร้าน T3078 คลิปไทยซื้อชาตอนเดินอัปเปอร์ฮิลส์</p>
+<div class="actions">
+<a class="btn btn-maps" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%96%9C%E8%8C%B6+%E6%B7%B1%E4%B8%9A%E4%B8%8A%E5%9F%8E+%E5%8D%97%E5%8C%BA%E4%B8%80%E6%9C%9F%E4%B8%89%E6%A5%BCT3078+%E7%9A%87%E5%B2%97%E8%B7%AF5001%E5%8F%B7" rel="noopener noreferrer" target="_blank">Maps</a> <a class="btn btn-yt" href="https://www.youtube.com/watch?v=Vygruw9XqP8&amp;t=545s" rel="noopener noreferrer" target="_blank">YouTube · 9:05</a>
+</div>
+</article>
+<article class="card">
+<div class="card-top"><span class="area-tag">ฝูเถียน</span></div>
+<h3>ออร์บิตวัน ร้านอาหารหุ่นยนต์<span class="also">Orbit One 奥彼文星球食研所（iN城市广场店）</span></h3>
+<p class="do">ร้านเวสเทิร์นธีมยานอวกาศ ชั้น LG ของ iN城市广场 จานส่งด้วยรางแม่เหล็ก ไม่ใช่สาขาหลงหัว</p>
+<div class="actions">
+<a class="btn btn-maps" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%A5%A5%E5%BD%BC%E6%96%87%E6%98%9F%E7%90%83%E9%A3%9F%E7%A0%94%E6%89%80+iN%E5%9F%8E%E5%B8%82%E5%B9%BF%E5%9C%BA+%E6%B7%B1%E5%8D%97%E4%B8%AD%E8%B7%AF1088%E5%8F%B7" rel="noopener noreferrer" target="_blank">Maps</a> <a class="btn btn-yt" href="https://www.youtube.com/watch?v=k-NNaDPdj40&amp;t=1863s" rel="noopener noreferrer" target="_blank">YouTube · Homeless Pelican 31:03</a> <a class="btn btn-yt" href="https://www.youtube.com/watch?v=aPyza4Y_agk&amp;t=1546s" rel="noopener noreferrer" target="_blank">YouTube · Dave Mani 25:46</a>
+</div>
+</article>
+<article class="card">
+<div class="card-top"><span class="area-tag">ฝูเถียน</span></div>
+<h3>โคโค่พาร์ค ฝูเถียน<span class="also">购物公园 COCO Park（福田）</span></h3>
+<p class="do">ห้างเปิดโล่งย่านกลางคืนฝูเถียน ติดเมโทร购物公园 คนละที่กับ Galaxy WORLD·COCO Park หลงกัง</p>
+<div class="actions">
+<a class="btn btn-maps" href="https://www.google.com/maps/search/?api=1&amp;query=COCO+Park+%E8%B4%AD%E7%89%A9%E5%85%AC%E5%9B%AD+%E7%A6%8F%E7%94%B0+%E7%A6%8F%E5%8D%8E%E4%B8%89%E8%B7%AF" rel="noopener noreferrer" target="_blank">Maps</a> <a class="btn btn-yt is-open" href="https://www.youtube.com/watch?v=aPyza4Y_agk" rel="noopener noreferrer" target="_blank">YouTube · Dave Mani · ยังไม่มีนาที</a> <a class="btn btn-yt is-open" href="https://www.youtube.com/watch?v=V52rtjqYnTQ" rel="noopener noreferrer" target="_blank">YouTube · Fit and Travel · ยังไม่มีนาที</a>
+</div>
+</article>
+<article class="card">
+<div class="card-top"><span class="area-tag">ฝูเถียน</span></div>
+<h3>วันอเวนิว / จอยเซ็นเตอร์<span class="also">One Avenue 卓悦中心</span></h3>
+<p class="do">ห้างเปิดโล่งฝูเถียน CBD ที่คลิปอังกฤษเรียก Joy Center และ One Avenue ลานน้ำและไฟ LED อย่าสับสนกับ壹方城 เป่าอัน</p>
+<div class="actions">
+<a class="btn btn-maps" href="https://www.google.com/maps/search/?api=1&amp;query=One+Avenue+%E5%8D%93%E6%82%A6%E4%B8%AD%E5%BF%83+%E7%A6%8F%E5%8D%8E%E4%B8%80%E8%B7%AF348%E5%8F%B7+%E7%A6%8F%E7%94%B0" rel="noopener noreferrer" target="_blank">Maps</a> <a class="btn btn-yt" href="https://www.youtube.com/watch?v=EsRS2msqiKQ&amp;t=1301s" rel="noopener noreferrer" target="_blank">YouTube · 21:41</a>
+</div>
+</article>
+<article class="card">
+<div class="card-top"><span class="area-tag">ฝูเถียน</span></div>
+<h3>ห้องสมุดเซินเจิ้น<span class="also">深圳图书馆</span></h3>
+<p class="do">ห้องสมุดสาธารณะติดศูนย์ราชการ คลิป Dave แวะดูสถาปัตย์ เดินต่อพิพิธภัณฑ์วางผังเมืองได้</p>
+<div class="actions">
+<a class="btn btn-maps" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%B7%B1%E5%9C%B3%E5%9B%BE%E4%B9%A6%E9%A6%86+%E5%B8%82%E6%B0%91%E4%B8%AD%E5%BF%83+%E7%A6%8F%E4%B8%AD%E4%B8%80%E8%B7%AF" rel="noopener noreferrer" target="_blank">Maps</a> <a class="btn btn-yt" href="https://www.youtube.com/watch?v=aPyza4Y_agk&amp;t=763s" rel="noopener noreferrer" target="_blank">YouTube · 12:43</a>
+</div>
+</article>
+</div>
+</section><section class="area shell" id="hqb">
+<p class="kicker">Huaqiangbei</p>
+<h2>หัวเฉียงเป่ย</h2>
+<p class="why">ตลาดอิเล็กทรอนิกส์ เลือก SEG เป็นหมุดหลัก แล้วเดินต่อตึกข้างเคียง</p>
+<div class="cards">
+<article class="card">
+<div class="card-top"><span class="area-tag">หัวเฉียงเป่ย</span></div>
+<h3>ถนนคนเดินหัวเฉียงเป่ย<span class="also">华强北商业街</span></h3>
+<p class="do">ย่านฮาร์ดแวร์ใหญ่ เดินเชื่อมห้างอิเล็กฯ หลายตึก คลิป Dave และคลิปไทยเดินดูแกดเจ็ตและราคาโรงงาน</p>
+<div class="actions">
+<a class="btn btn-maps" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%8D%8E%E5%BC%BA%E5%8C%97%E5%95%86%E4%B8%9A%E8%A1%97+%E6%B7%B1%E5%9C%B3+%E7%A6%8F%E7%94%B0" rel="noopener noreferrer" target="_blank">Maps</a> <a class="btn btn-yt" href="https://www.youtube.com/watch?v=aPyza4Y_agk&amp;t=1165s" rel="noopener noreferrer" target="_blank">YouTube · Dave Mani 19:25</a> <a class="btn btn-yt is-open" href="https://www.youtube.com/watch?v=V52rtjqYnTQ" rel="noopener noreferrer" target="_blank">YouTube · Fit and Travel · ยังไม่มีนาที</a>
+</div>
+</article>
+<article class="card">
+<div class="card-top"><span class="area-tag">หัวเฉียงเป่ย</span></div>
+<h3>เซเก๋อ / ห้างอิเล็กทรอนิกส์ SEG<span class="also">赛格广场 / 赛格电子市场</span></h3>
+<p class="do">ตึกแลนด์มาร์กหัวเฉียงเป่ย ชั้นล่างเป็นตลาดชิ้นส่วน จุดปักหลักถ้าเลือกได้แค่จุดเดียว</p>
+<div class="actions">
+<a class="btn btn-maps" href="https://www.google.com/maps/place/%E8%B5%9B%E6%A0%BC%E5%B9%BF%E5%9C%BA/@22.54361,114.08111,17z" rel="noopener noreferrer" target="_blank">Maps</a> <a class="btn btn-yt" href="https://www.youtube.com/watch?v=aPyza4Y_agk&amp;t=1165s" rel="noopener noreferrer" target="_blank">YouTube · Dave Mani 19:25</a> <a class="btn btn-yt is-open" href="https://www.youtube.com/watch?v=V52rtjqYnTQ" rel="noopener noreferrer" target="_blank">YouTube · Fit and Travel · ยังไม่มีนาที</a>
+</div>
+</article>
+<article class="card">
+<div class="card-top"><span class="area-tag">หัวเฉียงเป่ย</span></div>
+<h3>ห้างหยวนหวัง ตลาดมือถือส่ง<span class="also">远望数码商城</span></h3>
+<p class="do">ศูนย์ค้าส่งมือถือที่คึกคักบนถนน华强北 คลิปไทยเดินตลาดโทรศัพท์ยกแผง ยังไม่มีนาทีในคลิป</p>
+<div class="actions">
+<a class="btn btn-maps" href="https://www.google.com/maps/search/?api=1&amp;query=%E8%BF%9C%E6%9C%9B%E6%95%B0%E7%A0%81%E5%95%86%E5%9F%8E+%E5%8D%8E%E5%BC%BA%E5%8C%97" rel="noopener noreferrer" target="_blank">Maps</a> <a class="btn btn-yt is-open" href="https://www.youtube.com/watch?v=V52rtjqYnTQ" rel="noopener noreferrer" target="_blank">YouTube · ยังไม่มีนาที</a>
+</div>
+</article>
+<article class="card">
+<div class="card-top"><span class="area-tag">หัวเฉียงเป่ย</span></div>
+<h3>ร้านดีเจไอหัวเฉียงเป่ย (ออทอไรซ์)<span class="also">大疆（深圳华强电子世界授权体验店）</span></h3>
+<p class="do">ร้านออทอไรซ์ใน华强广场 B ชั้น 1 ไม่ใช่แฟลกชิป欢乐海岸 ใช้ดูราคาในตลาด ยังไม่มีนาทีในคลิป</p>
+<div class="actions">
+<a class="btn btn-maps" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%A4%A7%E7%96%86+%E5%8D%8E%E5%BC%BA%E7%94%B5%E5%AD%90%E4%B8%96%E7%95%8C%E6%8E%88%E6%9D%83%E4%BD%93%E9%AA%8C%E5%BA%97+%E5%8D%8E%E5%BC%BA%E5%8C%97%E8%B7%AF1019%E5%8F%B7+%E5%8D%8E%E5%BC%BA%E5%B9%BF%E5%9C%BAB%E5%BA%A7" rel="noopener noreferrer" target="_blank">Maps</a> <a class="btn btn-yt is-open" href="https://www.youtube.com/watch?v=V52rtjqYnTQ" rel="noopener noreferrer" target="_blank">YouTube · ยังไม่มีนาที</a>
+</div>
+</article>
+</div>
+</section><section class="area shell" id="longgang">
+<p class="kicker">Longgang</p>
+<h2>หลงกัง</h2>
+<p class="why">ร้าน 6S อยู่ใน Galaxy WORLD·COCO Park ไม่ใช่โคโค่พาร์คฝูเถียน</p>
+<div class="cards">
+<article class="card">
+<div class="card-top"><span class="area-tag">หลงกัง</span></div>
+<h3>ร้านหุ่นยนต์ 6S แห่งแรกของโลก<span class="also">全球首家机器人6S店（星河WORLD·COCO Park）</span></h3>
+<p class="do">โชว์รูมหุ่นยนต์ใน Galaxy WORLD·COCO Park หลงกัง ไม่ใช่โคโค่พาร์คฝูเถียน Homeless Pelican และ Dave Mani เดินในร้าน</p>
+<div class="actions">
+<a class="btn btn-maps" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%85%A8%E7%90%83%E9%A6%96%E5%AE%B6%E6%9C%BA%E5%99%A8%E4%BA%BA6S%E5%BA%97+%E6%98%9F%E6%B2%B3WORLD+COCO+Park+%E9%BE%99%E5%B2%97+%E5%9D%82%E7%94%B0+%E9%9B%85%E5%AE%9D%E8%B7%AF" rel="noopener noreferrer" target="_blank">Maps</a> <a class="btn btn-yt" href="https://www.youtube.com/watch?v=k-NNaDPdj40&amp;t=61s" rel="noopener noreferrer" target="_blank">YouTube · Homeless Pelican 1:01</a> <a class="btn btn-yt" href="https://www.youtube.com/watch?v=aPyza4Y_agk&amp;t=1889s" rel="noopener noreferrer" target="_blank">YouTube · Dave Mani 31:29</a>
+</div>
+</article>
+<article class="card">
+<div class="card-top"><span class="area-tag">หลงกัง</span></div>
+<h3>Dough Bros โดนัท<span class="also">Dough Bros（龙岗星河双子塔COCO PARK店）</span></h3>
+<p class="do">สาขาอย่างเป็นทางการชั้น 2 ห้างเดียวกับร้าน 6S คลิป Dave มีบท Birthday Doughnuts</p>
+<div class="actions">
+<a class="btn btn-maps" href="https://www.google.com/maps/search/?api=1&amp;query=Dough+Bros+%E6%98%9F%E6%B2%B3WORLD+%E9%9B%85%E5%AE%9D%E8%B7%AF1%E5%8F%B7+%E9%BE%99%E5%B2%97" rel="noopener noreferrer" target="_blank">Maps</a> <a class="btn btn-yt" href="https://www.youtube.com/watch?v=aPyza4Y_agk&amp;t=2090s" rel="noopener noreferrer" target="_blank">YouTube · 34:50</a>
+</div>
+</article>
+</div>
+</section><section class="area shell" id="baoan">
+<p class="kicker">Bao'an</p>
+<h2>เป่าอัน</h2>
+<p class="why">สนามบิน สกีโดมบอนสกี และกลุ่ม OH Bay คนละที่กับ欢乐海岸</p>
+<div class="cards">
+<article class="card">
+<div class="card-top"><span class="area-tag">เป่าอัน</span></div>
+<h3>บอนสกี / โลกน้ำแข็งหว่าฟา<span class="also">前海华发冰雪世界 / HUAFA SNOW BONSKI</span></h3>
+<p class="do">สกีโดมในร่มที่เฉียนไห่/ซาจิ่ง เขตเป่าอัน ไม่ใช่ MixC World หลงกัง Homeless Pelican มีบท indoor ski</p>
+<div class="actions">
+<a class="btn btn-maps" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%89%8D%E6%B5%B7%E5%8D%8E%E5%8F%91%E5%86%B0%E9%9B%AA%E4%B8%96%E7%95%8C+%E5%8D%8E%E5%8F%91%E8%B6%85%E9%9B%AA%E4%B8%AD%E5%BF%83+%E5%AE%9D%E5%AE%89+%E6%B2%99%E4%BA%95" rel="noopener noreferrer" target="_blank">Maps</a> <a class="btn btn-yt" href="https://www.youtube.com/watch?v=k-NNaDPdj40&amp;t=1083s" rel="noopener noreferrer" target="_blank">YouTube · 18:03</a>
+</div>
+</article>
+<article class="card">
+<div class="card-top"><span class="area-tag">เป่าอัน</span></div>
+<h3>ร้านหนังสือจงชูเก๋อ<span class="also">钟书阁（欢乐港湾 / OH BAY）</span></h3>
+<p class="do">ชั้นวางเกลียวแดงที่ OH Bay เป่าอัน ไม่ใช่โฮ่วไห่ Homeless Pelican เดินร้านนี้ แต่ยังไม่มีนาทีในคลิป</p>
+<div class="actions">
+<a class="btn btn-maps" href="https://www.google.com/maps/search/?api=1&amp;query=%E9%92%9F%E4%B9%A6%E9%98%81+%E6%AC%A2%E4%B9%90%E6%B8%AF%E6%B9%BE+OH+BAY+%E5%AE%9D%E5%AE%89" rel="noopener noreferrer" target="_blank">Maps</a> <a class="btn btn-yt is-open" href="https://www.youtube.com/watch?v=k-NNaDPdj40" rel="noopener noreferrer" target="_blank">YouTube · ยังไม่มีนาที</a>
+</div>
+</article>
+<article class="card">
+<div class="card-top"><span class="area-tag">เป่าอัน</span></div>
+<h3>ชิงช้าสวรรค์แสงอ่าว<span class="also">湾区之光</span></h3>
+<p class="do">ชิงช้าสวรรค์คานยื่นสูง 128 ม. ที่ปลาย OH Bay Homeless Pelican ปิดวันที่นี่ แต่ยังไม่มีนาทีในคลิป</p>
+<div class="actions">
+<a class="btn btn-maps" href="https://www.google.com/maps/place/%E6%B9%BE%E5%8C%BA%E4%B9%8B%E5%85%89/@22.5441,113.883,17z" rel="noopener noreferrer" target="_blank">Maps</a> <a class="btn btn-yt is-open" href="https://www.youtube.com/watch?v=k-NNaDPdj40" rel="noopener noreferrer" target="_blank">YouTube · ยังไม่มีนาที</a>
+</div>
+</article>
+<article class="card">
+<div class="card-top"><span class="area-tag">เป่าอัน</span></div>
+<h3>โอ้เบย์ / อ่าวแห่งความสุข<span class="also">欢乐港湾 OH BAY</span></h3>
+<p class="do">คอมเพล็กซ์ริมทะเลเป่าอัน มีชิงช้าสวรรค์และจงชูเก๋อ คนละที่กับ欢乐海岸 หนานซาน ยังไม่มีนาทีในคลิป</p>
+<div class="actions">
+<a class="btn btn-maps" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%AC%A2%E4%B9%90%E6%B8%AF%E6%B9%BE+OH+BAY+%E5%AE%9D%E5%AE%89+%E5%AE%9D%E5%85%B4%E8%B7%AF" rel="noopener noreferrer" target="_blank">Maps</a> <a class="btn btn-yt is-open" href="https://www.youtube.com/watch?v=k-NNaDPdj40" rel="noopener noreferrer" target="_blank">YouTube · ยังไม่มีนาที</a>
+</div>
+</article>
+<article class="card">
+<div class="card-top"><span class="area-tag">เป่าอัน</span></div>
+<h3>ศูนย์สาธิตแท็กซี่บิน อีหัง<span class="also">宝安城市空中交通运营示范中心（亿航）</span></h3>
+<p class="do">ลาน eVTOL ของอีหังฝั่งตะวันออกของ OH Bay คลิป Dave มีบท Flying Taxi เข้าชมได้เฉพาะช่วงสาธิต</p>
+<div class="actions">
+<a class="btn btn-maps" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%AE%9D%E5%AE%89%E5%9F%8E%E5%B8%82%E7%A9%BA%E4%B8%AD%E4%BA%A4%E9%80%9A%E8%BF%90%E8%90%A5%E7%A4%BA%E8%8C%83%E4%B8%AD%E5%BF%83+%E6%AC%A2%E4%B9%90%E6%B8%AF%E6%B9%BE+%E4%BA%BF%E8%88%AA+EH216" rel="noopener noreferrer" target="_blank">Maps</a> <a class="btn btn-yt" href="https://www.youtube.com/watch?v=aPyza4Y_agk&amp;t=897s" rel="noopener noreferrer" target="_blank">YouTube · 14:57</a>
+</div>
+</article>
+<article class="card">
+<div class="card-top"><span class="area-tag">เป่าอัน</span></div>
+<h3>ท่าอากาศยานเซินเจิ้น เป่าอัน<span class="also">深圳宝安国际机场</span></h3>
+<p class="do">สนามบินหลัก อาคารผู้โดยสารดีไซน์คลื่น จุดเริ่มคลิปไทย/AirAsia ยังไม่มีนาทีในคลิป</p>
+<div class="actions">
+<a class="btn btn-maps" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%B7%B1%E5%9C%B3%E5%AE%9D%E5%AE%89%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA" rel="noopener noreferrer" target="_blank">Maps</a> <a class="btn btn-yt is-open" href="https://www.youtube.com/watch?v=V52rtjqYnTQ" rel="noopener noreferrer" target="_blank">YouTube · ยังไม่มีนาที</a>
+</div>
+</article>
+</div>
+</section><section class="area shell" id="qianhai">
+<p class="kicker">Qianhai</p>
+<h2>เฉียนไห่</h2>
+<p class="why">สวนหิน มิกซ์ซีเฉียนไห่ และร้านพระราม 9 ที่ยืนยันสาขาแล้ว</p>
+<div class="cards">
+<article class="card">
+<div class="card-top"><span class="area-tag">เฉียนไห่</span></div>
+<h3>สวนหินเฉียนไห่<span class="also">前海石公园</span></h3>
+<p class="do">สวนชายฝั่งฟรี มีก้อนหินเฉียนไห่และวิวตึก Go Went Go มีบท Qianhaishi Park Guiwan Section</p>
+<div class="actions">
+<a class="btn btn-maps" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%89%8D%E6%B5%B7%E7%9F%B3%E5%85%AC%E5%9B%AD+%E5%89%8D%E6%B9%BE%E4%BA%8C%E8%B7%AF+%E5%8D%97%E5%B1%B1/%E5%89%8D%E6%B5%B7" rel="noopener noreferrer" target="_blank">Maps</a> <a class="btn btn-yt" href="https://www.youtube.com/watch?v=Vygruw9XqP8&amp;t=2130s" rel="noopener noreferrer" target="_blank">YouTube · 35:30</a>
+</div>
+</article>
+<article class="card">
+<div class="card-top"><span class="area-tag">เฉียนไห่</span></div>
+<h3>มิกซ์ซี เฉียนไห่<span class="also">万象前海</span></h3>
+<p class="do">ห้างมิกซ์ซีที่เฉียนไห่ คนละแห่งกับ深圳湾万象城 และ万象天地 เป็นห้างที่ร้านพระราม 9 ตั้งอยู่ ยังไม่มีนาทีในคลิป</p>
+<div class="actions">
+<a class="btn btn-maps" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%B8%87%E8%B1%A1%E5%89%8D%E6%B5%B7+%E6%A1%82%E6%B9%BE%E5%9B%9B%E8%B7%AF169%E5%8F%B7" rel="noopener noreferrer" target="_blank">Maps</a> <a class="btn btn-yt is-open" href="https://www.youtube.com/watch?v=V52rtjqYnTQ" rel="noopener noreferrer" target="_blank">YouTube · ยังไม่มีนาที</a>
+</div>
+</article>
+<article class="card">
+<div class="card-top"><span class="area-tag">เฉียนไห่</span></div>
+<h3>ก๋วยเตี๋ยวเรือพระราม 9<span class="also">拉玛九·泰国和牛船面（万象前海店）</span></h3>
+<p class="do">สาขาที่ยืนยันได้: 万象前海 ชั้น B1 ร้าน B164 ไม่ใช่深圳湾万象城 คลิปไทยกินข้าวลา ยังไม่มีนาทีในคลิป</p>
+<div class="actions">
+<a class="btn btn-maps" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%8B%89%E7%8E%9B%E4%B9%9D+%E6%B3%B0%E5%9B%BD%E5%92%8C%E7%89%9B%E8%88%B9%E9%9D%A2+%E4%B8%87%E8%B1%A1%E5%89%8D%E6%B5%B7+%E6%A1%82%E6%B9%BE%E5%9B%9B%E8%B7%AF169%E5%8F%B7+B164" rel="noopener noreferrer" target="_blank">Maps</a> <a class="btn btn-yt is-open" href="https://www.youtube.com/watch?v=V52rtjqYnTQ" rel="noopener noreferrer" target="_blank">YouTube · ยังไม่มีนาที</a>
+</div>
+</article>
+</div>
+</section><section class="area shell" id="luohu">
+<p class="kicker">Luohu</p>
+<h2>หลัวหู</h2>
+<p class="why">ตงเหมิน/ลาวเจียจากคลิปไทยคืนแรก</p>
+<div class="cards">
+<article class="card">
+<div class="card-top"><span class="area-tag">หลัวหู</span></div>
+<h3>ถนนคนเดินตงเหมิน / ลาวเจีย<span class="also">东门步行街 / 老街</span></h3>
+<p class="do">ถนนคนเดินเก่าแก่ของหลัวหู คลิปไทยพักแถวนี้แล้วเดินตลาด ยังไม่มีนาทีในคลิป</p>
+<div class="actions">
+<a class="btn btn-maps" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%B8%9C%E9%97%A8%E6%AD%A5%E8%A1%8C%E8%A1%97+%E6%B7%B1%E5%9C%B3+%E7%BD%97%E6%B9%96" rel="noopener noreferrer" target="_blank">Maps</a> <a class="btn btn-yt is-open" href="https://www.youtube.com/watch?v=V52rtjqYnTQ" rel="noopener noreferrer" target="_blank">YouTube · ยังไม่มีนาที</a>
+</div>
+</article>
+</div>
+</section>
+</main>
+
+<footer class="footer">
+<div class="shell">
+<p><strong>Fatty Uncle ลุงอ้วน กินกะเที่ยว</strong>แผนทริปเซินเจิ้นตามพื้นที่ · 39 จุดจาก <a href="https://docs.google.com/document/d/19XRnzvpl0OOKJvzDO7KE31PA1tEEyuQXozNQlp4vuks/edit">เอกสาร</a> และแผนที่เดิม · <a href="./">โปรแกรมเดินทาง</a></p>
+</div>
+</footer>
+<script>
+    const chips=[...document.querySelectorAll('.chips button')];
+    const areas=[...document.querySelectorAll('.area')];
+    const valid=new Set(['all',...areas.map(s=>s.id)]);
+    function applyArea(id,scroll=true){
+      const area=valid.has(id)?id:'all';
+      chips.forEach(chip=>chip.setAttribute('aria-pressed',String(chip.dataset.area===area)));
+      areas.forEach(section=>{section.hidden=area!=='all'&&section.id!==area});
+      if(!scroll)return;
+      const target=document.getElementById(area==='all'?'map':area);
+      if(target)target.scrollIntoView({block:'start'});
+      history.replaceState(null,'',area==='all'?location.pathname:('#'+area));
+    }
+    chips.forEach(chip=>chip.addEventListener('click',()=>applyArea(chip.dataset.area)));
+    applyArea((location.hash||'#all').slice(1),false);
+</script>
+</body>
+</html>
