@@ -56,7 +56,7 @@
     .chip-bar{position:sticky;top:3.6rem;z-index:24;background:rgb(255 253 248/.97);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
     .chips{display:flex;gap:.4rem;padding:.55rem 0;overflow:auto;scrollbar-width:thin}
     .chips button{flex:0 0 auto;border:1px solid var(--line);background:transparent;color:var(--navy);font:700 .82rem var(--display);padding:.55rem .8rem;border-radius:999px;white-space:nowrap;cursor:pointer}
-    .chips button[aria-pressed=\"true\"]{background:var(--wine);border-color:var(--wine);color:white}
+    .chips button[aria-pressed="true"]{background:var(--wine);border-color:var(--wine);color:white}
 
     .map-block{padding:1rem 0 0;scroll-margin-top:8rem}
     .map-frame{width:100%;height:14.5rem;border:1px solid var(--line);background:var(--paper)}
@@ -104,6 +104,80 @@
 </style>
 </head>
 <body>
-<a class=\"skip\" href=\"#main\">ข้ามไปเนื้อหาหลัก</a>
+<a class="skip" href="#main">ข้ามไปเนื้อหาหลัก</a>
+<header class="header">
+<nav aria-label="เมนูหลัก" class="nav shell">
+<a aria-label="กลับไปแผนเดินทางลุงอ้วนตะลุยจีน" class="brand" href="/china-tour/">
+<span aria-hidden="true" class="brand-mark">FU</span>
+<span><strong>Fatty Uncle</strong><small>แผนทริปเซินเจิ้น</small></span>
+</a>
+<a class="back" href="/china-tour/">โปรแกรมเดินทาง</a>
+</nav>
+</header>
+
+<div class="chip-bar">
+<div aria-label="เลือกย่าน" class="chips shell" role="toolbar">
+<button aria-pressed="true" data-area="all" type="button">ทั้งหมด</button><button aria-pressed="false" data-area="nanshan" type="button">หนานซาน</button><button aria-pressed="false" data-area="futian" type="button">ฝูเถียน</button><button aria-pressed="false" data-area="hqb" type="button">หัวเฉียงเป่ย</button><button aria-pressed="false" data-area="longgang" type="button">หลงกัง</button><button aria-pressed="false" data-area="baoan" type="button">เป่าอัน</button><button aria-pressed="false" data-area="qianhai" type="button">เฉียนไห่</button><button aria-pressed="false" data-area="luohu" type="button">หลัวหู</button>
+</div>
+</div>
+
+<main id="main">
+<section class="intro shell">
+<p class="kicker">Shenzhen · 5 clips</p>
+<h1>ดูตามพื้นที่ · 39 จุดจากคลิป</h1>
+<p>จัดตามย่านจากเอกสารและแผนที่เดิมเท่านั้น ใช้ได้แค่ห้าคลิปด้านล่าง เซี่ยงไฮ้ ปักกิ่ง เฉาหนาน ซัวเถา กรุงเทพ และไทยไม่อยู่ในหน้านี้ นาทีมาจากบทในคลิปเท่านั้น ถ้าไม่มีบทจะไม่เดาเวลา รูปเป็นการถ่ายสถานที่จริงจาก Wikimedia ไม่ใช้ภาพวาดเอไอ</p>
+<div class="clips">
+<a href="https://www.youtube.com/watch?v=k-NNaDPdj40" rel="noopener noreferrer" target="_blank">Homeless Pelican</a>
+<a href="https://www.youtube.com/watch?v=Vygruw9XqP8" rel="noopener noreferrer" target="_blank">Go Went Go</a>
+<a href="https://www.youtube.com/watch?v=V52rtjqYnTQ" rel="noopener noreferrer" target="_blank">Fit and Travel</a>
+<a href="https://www.youtube.com/watch?v=aPyza4Y_agk" rel="noopener noreferrer" target="_blank">Dave Mani</a>
+<a href="https://www.youtube.com/watch?v=EsRS2msqiKQ" rel="noopener noreferrer" target="_blank">Paul Lee</a>
+</div>
+</section>
+
+<section class="map-block shell" id="map">
+<iframe allowfullscreen class="map-frame" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/d/embed?mid=1N0BsRIry66y1mco8EMeAh6BZdxtzG4w" title="แผนที่ลุงอ้วนจีน จาก 5 คลิป"></iframe>
+<p class="map-note">แผนที่เดิม mid=1N0BsRIry66y1mco8EMeAh6BZdxtzG4w · การ์ดด้านล่างเป็นหมุดเซินเจิ้น 39 จุดเท่านั้น ชั้นซัวเถาและหมุดนอกเซินเจิ้นในแผนที่นี้ไม่ได้ใส่เป็นการ์ด ไม่มีกรุงเทพ · <a href="https://www.google.com/maps/d/viewer?mid=1N0BsRIry66y1mco8EMeAh6BZdxtzG4w" rel="noopener noreferrer" target="_blank">เปิดแผนที่เต็ม</a></p>
+</section>
+
+<section class="area shell" id="nanshan">
+<p class="kicker">Nanshan / Houhai</p>
+<h2>หนานซาน</h2>
+<p class="why">คลัสเตอร์อ่าว: โอซีที ดีเจไอ สวนคนเก่ง อินโน 100 และมิกซ์ซีสองแห่งคนละที่</p>
+<div class="cards">
+<article class="card" data-place="oct-harbour">
+<figure class="card-media"><img alt="Canal and shop buildings at OCT Harbour 欢乐海岸, Nanshan, Shenzhen" src="https://commons.wikimedia.org/wiki/Special:FilePath/%E6%B7%B1%E5%9C%B3%20%E6%AC%A2%E4%B9%90%E6%B5%B7%E5%B2%B8%20huan%20le%20hai%20an%20-%20panoramio.jpg?width=1280" width="1280" height="800" loading="lazy" decoding="async"><figcaption>Wikimedia Commons · OCT Harbour canal · CC BY-SA 3.0</figcaption></figure>
+<div class="card-body"><div class="card-top"><span class="area-tag">หนานซาน</span></div>
+<h3>อ่าวโอซีที / หาบปี้โคสต์<span class="also">欢乐海岸 · OCT Harbour</span></h3>
+<p class="do">คอมเพล็กซ์ริมอ่าวเซินเจิ้น มีคลอง ร้านอาหาร และแฟลกชิปดีเจไอ คนละที่กับ欢乐港湾 เป่าอัน</p>
+<div class="actions">
+<a class="btn btn-maps" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%AC%A2%E4%B9%90%E6%B5%B7%E5%B2%B8+%E5%8D%97%E5%B1%B1%E5%8C%BA+%E7%99%BD%E7%9F%B3%E8%B7%AF" rel="noopener noreferrer" target="_blank">Maps</a> <a class="btn btn-yt" href="https://www.youtube.com/watch?v=Vygruw9XqP8&amp;t=1457s" rel="noopener noreferrer" target="_blank">YouTube · 24:17</a>
+</div>
+</div>
+</article>
+</div>
+</section>
+</main>
+<footer class="footer">
+<div class="shell">
+<p><strong>Fatty Uncle ลุงอ้วน กินกะเที่ยว</strong>แผนทริปเซินเจิ้นตามพื้นที่ · 39 จุดจาก <a href="https://docs.google.com/document/d/19XRnzvpl0OOKJvzDO7KE31PA1tEEyuQXozNQlp4vuks/edit">เอกสาร</a> และแผนที่เดิม · <a href="/china-tour/">โปรแกรมเดินทาง</a></p>
+</div>
+</footer>
+<script>
+    const chips=[...document.querySelectorAll('.chips button')];
+    const areas=[...document.querySelectorAll('.area')];
+    const valid=new Set(['all',...areas.map(s=>s.id)]);
+    function applyArea(id,scroll=true){
+      const area=valid.has(id)?id:'all';
+      chips.forEach(chip=>chip.setAttribute('aria-pressed',String(chip.dataset.area===area)));
+      areas.forEach(section=>{section.hidden=area!=='all'&&section.id!==area});
+      if(!scroll)return;
+      const target=document.getElementById(area==='all'?'map':area);
+      if(target)target.scrollIntoView({block:'start'});
+      history.replaceState(null,'',area==='all'?location.pathname:('#'+area));
+    }
+    chips.forEach(chip=>chip.addEventListener('click',()=>applyArea(chip.dataset.area)));
+    applyArea((location.hash||'#all').slice(1),false);
+</script>
 </body>
 </html>
